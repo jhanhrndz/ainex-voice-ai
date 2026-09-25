@@ -16,7 +16,7 @@ capturas/
 *.jpg
 *.jpeg
 *.png
-!docs/*.png
+!docs/**
 *.mkv
 *.mp4
 *.avi
