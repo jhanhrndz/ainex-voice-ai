@@ -6,6 +6,10 @@
 [![ASR Engine](https://img.shields.io/badge/Faster--Whisper-CUDA%20Accelerated-purple.svg)](https://github.com/SYSTRAN/faster-whisper)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+<p align="center">
+  <img src="docs/images/banner.png" alt="AiNex Autonomous Voice & Vision AI Robot" width="100%" />
+</p>
+
 Sistema integral de interacción por lenguaje natural, visión computacional con Modelos de Visión-Lenguaje (VLM) y control cinemático para el robot humanoide **Hiwonder AiNex**. Desarrollado en el Centro de Investigación, Desarrollo Tecnológico e Innovación en Inteligencia Artificial y Robótica (**AudacIA**) de la Universidad Simón Bolívar.
 
 ---
