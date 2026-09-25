@@ -1,0 +1,18 @@
+[Unit]
+Description=Servicio de Control de Marcha y Servidor Socket TCP para AiNex (Nelson)
+After=network.target roscore.service
+Wants=roscore.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ros_ws/src/ainex_tutorial/scripts/gait_control
+Environment="PYTHONUNBUFFERED=1"
+Environment="ROS_MASTER_URI=http://localhost:11311"
+Environment="ROS_IP=127.0.0.1"
+ExecStart=/usr/bin/python3 /home/ubuntu/ros_ws/src/ainex_tutorial/scripts/gait_control/T800_gait_client.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
