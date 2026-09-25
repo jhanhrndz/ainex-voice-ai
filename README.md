@@ -1,4 +1,4 @@
-# 🤖 AiNex Humanoid Autonomous Voice & Vision Control ("Nelson")
+# AiNex Humanoid Autonomous Voice & Vision Control ("Nelson")
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/ROS-Noetic-brightgreen.svg)](https://www.ros.org/)
@@ -14,13 +14,13 @@ Sistema integral de interacción por lenguaje natural, visión computacional con
 
 ---
 
-## 🏛️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 El proyecto opera bajo una arquitectura cliente-servidor desacoplada que distribuye la carga de procesamiento entre una estación de trabajo (PC Host con aceleración por GPU) y el sistema embebido del robot (Raspberry Pi con ROS).
 
 ```mermaid
 graph TD
-    subgraph PC_Host["🖥️ Estación de Control (PC Host)"]
+    subgraph PC_Host[" Estación de Control (PC Host)"]
         MIC["🎤 Micrófono"] --> VAD["Silero VAD (Segmentación de Voz)"]
         VAD --> STT["STT Híbrido (Faster-Whisper CUDA / Google)"]
         STT --> NLP["NLP Engine (Wake Word 'Nelson' + Fuzzy Matching)"]
@@ -36,7 +36,7 @@ graph TD
         NLP -->|Feedback Auditivo| TTS["TTSEngine (Síntesis de Voz)"]
     end
 
-    subgraph Robot_Side["🤖 Robot Humanoide (AiNex / ROS)"]
+    subgraph Robot_Side["Robot Humanoide (AiNex / ROS)"]
         SOCK_CLI -->|TCP Socket Port 9000| SOCK_SRV["T800_gait_client.py (Servidor Socket)"]
         
         SOCK_SRV --> D1{"Nivel 1: Hardware Base"}
@@ -54,7 +54,7 @@ graph TD
 
 ---
 
-## ✨ Características Principales
+## Características Principales
 
 1. **Wake Word y Reconocimiento Robusto:**
    - Detección precisa de la palabra clave *"Nelson"* mediante similitud fonética (`RapidFuzz`).
@@ -72,7 +72,7 @@ graph TD
 
 ---
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 ainex-voice-ai/
@@ -118,7 +118,7 @@ ainex-voice-ai/
 
 ---
 
-## 🚀 Instalación y Puesta en Marcha
+## Instalación y Puesta en Marcha
 
 ### Prerrequisitos
 - **PC Host:** Windows 10/11 o Linux con Python 3.10+, tarjeta NVIDIA con soporte CUDA (recomendado para Whisper), y [Ollama](https://ollama.ai/) instalado con el modelo `qwen2.5vl:3b`.
@@ -170,7 +170,7 @@ python main.py
 
 ---
 
-## 🗣️ Comandos de Voz Soportados
+## Comandos de Voz Soportados
 
 Di siempre **"Nelson"** antes de cada orden:
 
@@ -191,7 +191,7 @@ Di siempre **"Nelson"** antes de cada orden:
 
 ---
 
-## 👥 Autores y Reconocimientos
+## Autores y Reconocimientos
 
 Proyecto desarrollado en el marco de Prácticas Profesionales de Ingeniería de Sistemas:
 - **Jhan Hernández Matías** - Desarrollador Líder (Arquitectura de software, cinemática y visión).
